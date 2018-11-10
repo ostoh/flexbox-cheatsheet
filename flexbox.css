@@ -1,0 +1,288 @@
+body {
+	margin: 0 0 43px 0;
+	padding: 0 32px;
+	background: #000;
+	color: #ccc;
+	font-family: 'Helvetica', sans-serif;
+	font-size: 1.1em;
+}
+
+a {
+	color: #f0f;
+}
+
+p,
+pre {
+	display: inline;
+}
+
+/* flex container */
+.row {
+	margin: 12px 0 32px 0;
+	padding: 4px 6px;
+	background: #333;
+	display: flex;
+	min-height: 55px;
+}
+
+.row-def {
+	flex-direction: row;
+}
+
+.row-reverse {
+	flex-direction: row-reverse;
+}
+
+.row-clmn {
+	flex-direction: column;
+}
+
+.row-clmn-reverse {
+	flex-direction: column-reverse;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.flex-nowrap {
+	flex-wrap: nowrap;
+}
+
+/* justify-content is used to align items on the main axis */
+.justify-content-left {
+	justify-content: flex-start;
+}
+
+.justify-content-middle {
+	justify-content: center;
+}
+
+.justify-content-right {
+	justify-content: flex-end;
+}
+
+.justify-content-spa {
+	justify-content: space-around;
+}
+
+.justify-content-spb {
+	justify-content: space-between;
+}
+
+.justify-content-spe {
+	justify-content: space-evenly;
+}
+
+/* align-items controls the alignment of items on the cross axis */
+.row-align {
+	height: 186px;
+}
+
+.align-items-stretch {
+	align-items: stretch;
+}
+
+.align-items-middle {
+	align-items: center;
+}
+
+.align-items-top {
+	align-items: flex-start;
+}
+
+.align-items-bottom {
+	align-items: flex-end;
+}
+
+/* explicitly target a single item. overrides same values as 'align-items' */
+.align-self-top {
+	align-self: flex-start;
+}
+
+.align-self-bottom {
+	align-self: flex-end;
+}
+
+.align-self-middle {
+	align-self: center;
+}
+
+/* align-content sets how the browser distributes space between and around items along the cross axis */
+.align-row {
+	width: 20%;
+}
+
+.align-content-top {
+	align-content: start;
+}
+
+.align-content-middle {
+	align-content: center;
+}
+
+.align-content-bottom {
+	align-content: end;
+}
+
+.align-content-spb {
+	align-content: space-between;
+}
+
+.align-content-spa {
+	align-content: space-around;
+}
+
+.align-content-bl {
+	align-content: baseline;
+}
+
+/* flex item */
+.column {
+	margin: 0;
+	padding: 18px 10px;
+	background: #444;
+	border: 1px solid #666;
+	text-align: center;
+}
+
+/* the order property sets how items are placed in the visual order, lowest value first */
+.column.third-last {
+	order: 6;
+	flex: 0.1;
+}
+
+
+/* flex is a shorthand that allows to set values in the order of flex-grow, flex-shrink, flex-basis. */
+.row-md {
+	margin: 0;
+	padding: 0;
+	background: #333;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+}
+
+@media (max-width: 50em) {
+	.row-md {
+		flex-wrap: wrap;
+	}
+}
+
+.column-md {
+	margin: 0;
+	padding: 18px 10px;
+	background: #444;
+	border: 1px solid #666;
+	text-align: center;
+}
+
+.col-12 { 
+	flex: 1 100%;
+}
+
+.col-11 { 
+	flex: 1 91.666666667%; 
+}
+
+.col-10 { 
+	flex: 1 83.333333333%; 
+}
+
+.col-9 { 
+	flex: 1 75%;  
+}
+
+.col-8 { 
+	flex: 1 66.666666667%; 
+}
+
+.col-7 { 
+	flex: 1 58.333333333%; 
+}
+
+.col-6 { 
+	flex: 1 50%; 
+}
+
+.col-5 { 
+	flex: 1 41.666666667%; 
+}
+
+.col-4 { 
+	flex: 1 33.333333333%; 
+}
+
+.col-3 { 
+	flex: 1 25%;  
+}
+
+.col-2 { 
+	flex: 1 16.666666667%; 
+}
+
+.col-1 { 
+	flex: 1 8.333333333%; 
+}
+
+/* menu navigation */
+.menu-bar {
+	margin: 0;
+	padding: 0;
+}
+
+/* booking form */
+.booking-wrap {
+	margin: 0;
+	padding: 12px 18px;
+	background: #CC2026;
+	color:  #fff;
+	max-width: 80%;
+}
+
+.frm-inline form {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.frm-inline form > * {
+	border: 0;
+}
+
+@media and (max-width: 50em) {
+	.frm-inline form {
+		flex-wrap: wrap;
+	}
+
+	.frm-inline form > * {
+		border: 0;
+		flex: 1 100%;
+	}
+}
+
+.frm-inline form label {
+	padding: 0 0 4px 0;
+	display: block;
+	font-size: 0.9em;
+}
+
+.frm-inline form input[type=text],
+.frm-inline form input[type=date],
+.frm-inline form select {
+	padding: 12px 10px;
+}
+
+.frm-inline form input[type=text] {
+	flex-basis: 240px;
+}
+
+.frm-inline form input[type=submit] {
+	padding: 12px 18px;
+	color: #fff;
+	background: #000;
+}

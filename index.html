@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Flexible Box Layout</title>
+	<link rel="stylesheet" type="text/css" href="flexbox.css">
+</head>
+<body>
+	<h1>Flexible Box Layout</h1>
+	<h4>According to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">MDN</a>, flexbox is a one-dimensional layout model (ie. flexbox deals with layout in one dimension at a time — either as a row or as a column) and also a method that offers space distribution between items and powerful alignment capabilities.</h4>
+	<pre>display: flex;</pre>
+	<div class="row row-def">flex container</div>
+	<pre>flex-direction: row;</pre>
+	<div class="row row-def">
+		<div class="column">flex item</div>
+	</div>
+	<pre>flex-direction: row-reverse;</pre>
+	<div class="row row-reverse">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+	</div>
+	<pre>flex-direction: column;</pre>
+	<div class="row row-clmn">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+	</div>
+	<pre>flex-direction: column-reverse;</pre>
+	<div class="row row-clmn-reverse">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+	</div>
+	<h3>Aligning Items in the Container</h3>
+	<ul>
+		<li>
+			<p>
+				<pre>justify-content </pre>- controls alignment of items on the main axis.
+			</p>
+		</li>
+		<li>
+			<p>
+				<pre>align-items </pre>- controls alignment of items on the cross axis.
+			</p>
+		</li>
+		<li>
+			<p>
+				<pre>align-content </pre>- sets how the browser distributes space between and around items along the cross axis.
+			</p>
+		</li>
+		<li>
+			<p>
+				<pre>align-self </pre>- controls alignment of an individual item on the cross axis.
+			</p>
+		</li>
+	</ul>
+	<pre>justify-content: flex-start;</pre>
+	<div class="row justify-content-left">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+	</div>
+	<pre>justify-content: center;</pre>
+	<div class="row justify-content-middle">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+	</div>
+	<pre>justify-content: flex-end;</pre>
+	<div class="row justify-content-right">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+	</div>
+	<pre>justify-content: space-around;</pre>
+	<div class="row justify-content-spa">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+	</div>
+	<pre>justify-content: space-between;</pre>
+	<div class="row justify-content-spb">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+	</div>
+	<pre>justify-content: space-evenly;</pre>
+	<div class="row justify-content-spe">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+	</div>
+	<pre>align-items: center;</pre>
+	<div class="row row-align align-items-middle">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column align-self-top">
+			<pre>align-self: flex-start;</pre>
+		</div>
+		<div class="column">col-4</div>
+		<div class="column">col-5</div>
+		<div class="column align-self-bottom">
+			<pre>align-self: flex-end;</pre>
+		</div>
+	</div>
+	<pre>align-items: stretch;</pre>
+	<div class="row row-align align-items-stretch">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+	</div>
+	<pre>align-items: start;</pre>
+	<div class="row row-align align-items-top">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+	</div>
+	<pre>align-items: end;</pre>
+	<div class="row row-align align-items-bottom">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+	</div>
+	<pre>align-content: start;</pre>
+	<div class="row align-row flex-wrap row-align align-content-top">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+		<div class="column">col-5</div>
+		<div class="column">col-6</div>
+	</div>
+	<pre>align-content: center;</pre>
+	<div class="row align-row flex-wrap row-align align-content-middle">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+		<div class="column">col-5</div>
+		<div class="column">col-6</div>
+	</div>
+	<pre>align-content: space-between;</pre>
+	<div class="row align-row flex-wrap row-align align-content-spb">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+		<div class="column">col-5</div>
+		<div class="column">col-6</div>
+	</div>
+	<pre>align-content: space-around;</pre>
+	<div class="row align-row flex-wrap row-align align-content-spa">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+		<div class="column">col-5</div>
+		<div class="column">col-6</div>
+	</div>
+	<pre>align-content: end;</pre>
+	<div class="row align-row flex-wrap row-align align-content-bottom">
+		<div class="column">col-1</div>
+		<div class="column">col-2</div>
+		<div class="column">col-3</div>
+		<div class="column">col-4</div>
+		<div class="column">col-5</div>
+		<div class="column">col-6</div>
+	</div>
+	<!-- <h3>A Flexbox Grid</h3>
+	<div class="row-md">
+		<div class="column-md col-12">100%</div>
+	</div>
+	<div class="row-md">
+		<div class="column-md col-11">91.6%</div>
+		<div class="column-md col-1">8.3%</div>
+	</div>
+	<div class="row-md">
+		<div class="column-md col-10">83.3%</div>
+		<div class="column-md col-2">16.6%</div>
+	</div>
+	<div class="row-md">
+		<div class="column-md col-9">75%</div>
+		<div class="column-md col-3">25%</div>
+	</div>
+	<div class="row-md">
+		<div class="column-md col-8">66.6%</div>
+		<div class="column-md col-4">33.3%</div>
+	</div>
+	<div class="row-md">
+		<div class="column-md col-7">58.3%</div>
+		<div class="column-md col-5">41.6%</div>
+	</div>
+	<div class="row-md">
+		<div class="column-md col-6">50%</div>
+		<div class="column-md col-6">50%</div>
+	</div>
+	<div class="row-md">
+		<div class="column-md col-5">41.6%</div>
+		<div class="column-md col-7">58.3%</div>
+	</div>
+	<div class="row-md">
+		<div class="column-md col-4">33.3%</div>
+		<div class="column-md col-8">66.6%</div>
+	</div>
+	<div class="row-md">
+		<div class="column-md col-3">25%</div>
+		<div class="column-md col-9">75%</div>
+	</div>
+	<div class="row-md">
+		<div class="column-md col-2">16.6%</div>
+		<div class="column-md col-10">83.3%</div>
+	</div>
+	<div class="row-md">
+		<div class="column-md col-1">8.3%</div>
+		<div class="column-md col-11">91.6%</div>
+	</div> -->
+	<h3>Ordering Items in the Container</h3>
+	<h4>the <pre>order</pre> property sets how items are placed in the visual order, lowest value first.</h4>
+	<p>on the third column <pre>order: 6;</pre></p>
+	<div class="row">
+		<div class="column">1</div>
+		<div class="column">2</div>
+		<div class="column third-last">3</div>
+		<div class="column">4</div>
+		<div class="column">5</div>
+		<div class="column">6</div>
+	</div>
+	<h2>Use Cases</h2>
+	<h3>Navigation</h3>
+	<div class="menu-bar">
+		<div class="row-nav">
+			<div class="clmn-nav"></div>
+		</div>
+	</div>
+	<h3>Inline Form</h3>
+	<div class="booking-wrap">
+		<div class="frm-inline">
+			<form action="">
+				<input type="text" placeholder="Where do you want to go?">
+				<label for="checkin">Check In</label>
+				<input type="date">
+				<label for="checkout">Check Out</label>
+				<input type="date">
+				<label for="rooms">Rooms</label>
+				<select name="" id="">
+					<option value="">1</option>
+					<option value="">2</option>
+					<option value="">3</option>
+					<option value="">4</option>
+				</select>
+				<label for="adults">Adults</label>
+				<select name="" id="">
+					<option value="">1</option>
+					<option value="">2</option>
+					<option value="">3</option>
+					<option value="">4</option>
+				</select>
+				<label for="children">Children</label>
+				<select name="" id="">
+					<option value="">1</option>
+					<option value="">2</option>
+					<option value="">3</option>
+					<option value="">4</option>
+				</select>
+				<input type="submit" value="Search">
+			</form>
+		</div>
+	</div>
+	<h3>Pricing</h3>
+</body>
+</html>

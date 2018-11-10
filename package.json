@@ -1,0 +1,15 @@
+{
+  "name": "learn-flexbox",
+  "version": "1.0.0",
+  "description": "Learning about flexible box layout module",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flexbox",
+    "css"
+  ],
+  "author": "Austin Mwangi",
+  "license": "MIT"
+}
